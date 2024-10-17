@@ -2,10 +2,6 @@
 import { mailOptions, transporter } from "@/config/nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  name: string;
-};
-
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
   email: "Email",

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
 
 import { Button } from '@/components/ui'
 import { useRef } from 'react'
