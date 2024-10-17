@@ -1,0 +1,34 @@
+.contact__form__container
+  padding: 0 10rem
+
+  .combine__input__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 2rem
+
+  .input__wrapper
+
+    &.margin
+      margin-top: 2rem
+
+    label
+      display: block
+      @extend %description-16
+      color: $alto
+      margin-bottom: 1rem
+
+    input, textarea
+      @extend %description-16
+      border: 0.1rem solid $alto
+      padding: 1.5rem
+      width: -webkit-fill-available
+      border-radius: 0.8rem
+
+      &.invalid
+        border-color: #ff6464
+
+      &.valid
+        border-color: $alto
+
+  .contact__form__button
+    margin-top: 2rem

@@ -1,0 +1,76 @@
+// .wrapper
+//   width: 450px
+//   height: 50px
+//   position: relative
+//   margin: auto
+//   background: #ccc
+//   overflow: hidden
+
+//   &::after
+//     width: 448px
+//     height: 48px
+//     content: ""
+//     position: absolute
+//     border: solid 1px white
+
+//   .boxes
+//     position: relative
+//     left: -50px
+
+//     .box
+//       width: 50px
+//       height: 50px
+//       position: absolute
+//       background: red
+//       font-size: 25px
+//       line-height: 50px
+//       text-align: center
+//       color: var(--color-just-black)
+
+.companies__logo__container
+  display: flex
+  justify-content: center
+  align-content: center
+  flex-direction: column
+  // flex-wrap: wrap
+
+  .companies__logo__wrapper
+    max-height: 80%
+    overflow: hidden
+
+    .companies__logo__cover
+      width: 100%
+      position: relative
+      overflow: hidden
+      height: 24rem
+
+      @media screen and (max-width: 48em)
+        height: 10rem
+
+      .logo__wrapper
+        width: 20%
+        position: absolute
+        visibility: hidden
+        top: 0
+
+        &::after
+          content: ""
+          display: block
+          position: relative
+          width: 100%
+          padding-bottom: 50%
+
+      .logo
+        display: grid
+        place-content: center
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        padding: 2rem
+        border-radius: 100%
+
+        svg
+          width: 15rem
+          height: 3rem

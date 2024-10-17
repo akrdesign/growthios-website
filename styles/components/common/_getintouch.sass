@@ -1,0 +1,36 @@
+.get__in__touch__section
+  width: 100%
+  height: 100vh
+  background-color: $mirage
+  padding: 10rem
+
+  .top__wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    h3
+      @extend %description-14
+      color: $cerise_red
+
+    h1
+      @extend %title-80
+      color: $white
+      text-transform: uppercase
+      margin: 2rem 0
+
+    p
+      @extend %description-16
+      color: $alto
+
+  .bottom__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin-top: 10rem
+
+    @media screen and (max-width: 48em)
+      grid-template-columns: 1fr
+
+    @media screen and (min-width: 48.063em) and (max-width: 64em)
+      grid-template-columns: 1fr

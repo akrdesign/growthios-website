@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "serviceName": "Counselling for depression",
+    "image": "/images/services/single/01.jpg",
+    "serviceContent": "If you're struggling with feelings of sadness, hopelessness, or worthlessness, we can help. Our therapists are trained in evidence-based techniques to help you overcome depression and regain a sense of joy and fulfillment in your life."
+  },
+  {
+    "id": 2,
+    "serviceName": "Counselling for divorce",
+    "image": "/images/services/single/02.jpg",
+    "serviceContent": "Going through a divorce can be one of the most challenging experiences of your life. We are here to provide compassionate support and guidance as you navigate this difficult time. Our therapists can help you process your emotions, manage conflict, and develop a plan for moving forward."
+  },
+  {
+    "id": 3,
+    "serviceName": "relationship problems",
+    "image": "/images/services/single/03.jpg",
+    "serviceContent": "If you're struggling in your relationships with partners, family members, or friends, we can help you develop the skills you need to communicate effectively, build trust, and strengthen your connections. Our therapists are trained in evidence-based techniques for couples and family therapy, and we will work with you to develop a plan that meets your unique needs."
+  }
+]

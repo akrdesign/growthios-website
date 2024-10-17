@@ -1,0 +1,12 @@
+.secondary-cursor
+  background-color: $white
+  border-radius: 100%
+  height: 10px
+  mix-blend-mode: difference
+  pointer-events: none
+  position: fixed
+  width: 10px
+  z-index: z('cursor')
+
+  @media screen and (max-width: 48em)
+    display: none

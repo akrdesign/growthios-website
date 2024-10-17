@@ -1,0 +1,35 @@
+@font-face {
+  font-family: $bebas-neue;
+  src: url("../../public/fonts/bebas-neue.woff2") format("woff2"),
+    url("../../public/fonts/bebas-neue.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $sora-light;
+  src: url("../../public/fonts/sora-light.woff2") format("woff2"),
+    url("../../public/fonts/sora-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $sora-medium;
+  src: url("../../public/fonts/sora-medium.woff2") format("woff2"),
+    url("../../public/fonts/sora-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $sora-semibold;
+  src: url("../../public/fonts/sora-semibold.woff2") format("woff2"),
+    url("../../public/fonts/sora-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

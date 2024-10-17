@@ -1,0 +1,25 @@
+.company__info__container
+  .company__info__wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 3rem
+    row-gap: 8rem
+
+  .company__info__cover
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    svg
+      height: 6rem
+      width: 6rem
+
+    h1
+      @extend %title-22
+
+    p
+      @extend %description-16
+      color: $alto
+
+  .company__info__location__button
+    margin-top: 3rem

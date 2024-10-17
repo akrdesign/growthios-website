@@ -1,0 +1,35 @@
+.case__study__card__container
+  overflow: hidden
+  border-radius: 2.4rem
+  display: flex
+  flex-direction: column
+  // height: 59rem
+  background: $white
+
+  &:first-child
+    transform: rotate(-2deg)
+
+  &:last-child
+    transform: rotate(2deg)
+
+  .image__wrapper
+    position: relative
+    height: 31.8rem
+
+    img
+      object-fit: cover
+
+  .content__wrapper
+    padding: 2.4rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    h1
+      @extend %title-22
+      color: $black
+
+    p
+      @extend %description-16
+      color: $black
+      margin: 1.6rem 0 3rem 0
