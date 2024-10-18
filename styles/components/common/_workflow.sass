@@ -6,6 +6,16 @@
   padding: 0 20rem
   position: relative
 
+  @media screen and (max-width: 48em)
+    grid-template-columns: 1fr
+    padding: 10rem 5rem 5rem 5rem
+    overflow: hidden
+    height: auto
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 15rem 5rem 5rem 5rem
+    height: auto
+
   .workflow__left__wrapper
     display: flex
     justify-content: center
@@ -18,11 +28,23 @@
       width: 80%
       color: $white
 
+      @media screen and (max-width: 48em)
+        width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        width: 100%
+
     .workflow__description
       @extend %description-16
       max-width: 80%
       color: $alto
       margin-top: 4rem
+
+      @media screen and (max-width: 48em)
+        max-width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        max-width: 100%
 
     .workflow__button__wrapper
       margin-top: 4rem
@@ -34,6 +56,9 @@
     justify-content: center
     gap: 2.4rem
 
+    @media screen and (max-width: 48em)
+      margin-top: 10rem
+
     .workflow__card__cover
       display: flex
       flex-direction: row
@@ -44,6 +69,12 @@
       border-radius: 2.4rem
       background-color: $white
       width: 80%
+
+      @media screen and (max-width: 48em)
+        width: 90%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        padding: 1.8rem
 
       &.workflow__card__cover__1
         transform: rotate(0deg)
@@ -58,6 +89,10 @@
         width: 5.8rem
         height: 5.8rem
 
+        @media screen and (min-width: 48.063em) and (max-width: 64em)
+          width: 6.8rem
+          height: 6.8rem
+
       h1
         @extend %title-22
         color: $black
@@ -71,9 +106,21 @@
     height: 96rem
     z-index: -1
 
+    @media screen and (min-width: 0em) and (max-width: 64em)
+      width: 70rem
+      height: 70rem
+
   .workflow__line
     position: absolute
     top: 0
     right: 10%
     width: 92.5rem
     height: 40rem
+
+    @media screen and (max-width: 48em)
+      top: -5.5rem
+      right: 3%
+      width: 61.5rem
+
+    @media screen and (min-width: 48.063em) and (max-width: 64em)
+      right: 2%

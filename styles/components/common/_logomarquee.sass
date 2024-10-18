@@ -1,38 +1,12 @@
-// .wrapper
-//   width: 450px
-//   height: 50px
-//   position: relative
-//   margin: auto
-//   background: #ccc
-//   overflow: hidden
-
-//   &::after
-//     width: 448px
-//     height: 48px
-//     content: ""
-//     position: absolute
-//     border: solid 1px white
-
-//   .boxes
-//     position: relative
-//     left: -50px
-
-//     .box
-//       width: 50px
-//       height: 50px
-//       position: absolute
-//       background: red
-//       font-size: 25px
-//       line-height: 50px
-//       text-align: center
-//       color: var(--color-just-black)
-
 .companies__logo__container
   display: flex
   justify-content: center
   align-content: center
   flex-direction: column
   // flex-wrap: wrap
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    margin-top: 5rem
 
   .companies__logo__wrapper
     max-height: 80%
@@ -46,6 +20,9 @@
 
       @media screen and (max-width: 48em)
         height: 10rem
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        height: 14rem
 
       .logo__wrapper
         width: 20%
