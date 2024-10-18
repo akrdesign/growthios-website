@@ -25,12 +25,12 @@ const HomePage = () => {
       </Head>
       <Header />
       <HomeHero />
-      <HomeAbout />
-      {/* <WorkFlow />
+      {/* <HomeAbout />
+      <WorkFlow />
       <FeaturedCaseStudies items={isFeaturedCaseStudies} />
       <Testimonials />
-      <GetInTouch />
-      <Footer /> */}
+      <GetInTouch /> */}
+      {/* <Footer /> */}
     </>
   )
 }

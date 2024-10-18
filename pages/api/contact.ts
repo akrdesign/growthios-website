@@ -1,15 +1,14 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { mailOptions, transporter } from "@/config/nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const CONTACT_MESSAGE_FIELDS = {
+const CONTACT_MESSAGE_FIELDS: Record<string, string> = {
   name: "Name",
   email: "Email",
-  subject: "Subject",
+  phone: "Phone",
   message: "Message",
 };
 
-const generateEmailContent = (data) => {
+const generateEmailContent = (data: Record<string, string>) => {
   const stringData = Object.entries(data).reduce(
     (str, [key, val]) =>
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
@@ -27,30 +26,31 @@ const generateEmailContent = (data) => {
 
 const handler = async (
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) => {
-
-  if(req.method === "POST") {
+  if (req.method === "POST") {
     const data = req.body;
-    console.log(data)
 
-    if(!data.name || !data.email || !data.phone || !data.message) {
-      return res.status(400).json({ message: 'Bad request' })
+    if (!data.name || !data.email || !data.phone || !data.message) {
+      return res.status(400).json({ message: "Bad request" });
     }
 
     try {
+      const emailContent = generateEmailContent(data);
       await transporter.sendMail({
         ...mailOptions,
-        ...generateEmailContent(data),
         subject: "New Contact Query",
-      })
-      return res.status(200).json({ success: true })
+        text: emailContent.text,
+        html: emailContent.html,
+      });
+      return res.status(200).json({ success: true });
     } catch (error) {
-      console.log(error)
-      return res.status(400).json({ message: 'Bad request' })
+      console.log(error);
+      return res.status(500).json({ message: "Internal Server Error" });
     }
   }
-  return res.status(400).json({ message: 'Bad request' })
-}
 
-export default handler
+  return res.status(400).json({ message: "Bad request" });
+};
+
+export default handler;

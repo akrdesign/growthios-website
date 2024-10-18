@@ -1,53 +1,71 @@
+import React, { useState } from 'react'
 import { Button } from '@/components/ui'
 import { sendContactForm } from '@/lib/api'
-import React, { useState } from 'react'
 
-const initValues = {
+type FormValues = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+type FormState = {
+  values: FormValues;
+};
+
+type TouchedState = {
+  [key in keyof FormValues]?: boolean;
+};
+
+const initValues: FormValues = {
   name: '',
   email: '',
   phone: '',
   message: '',
-}
+};
 
-const initState = { values: initValues }
+const initState: FormState = { values: initValues };
 
 const ContactForm = () => {
-  const [formState, setFormState] = useState(initState)
-  const [touched, setTouched] = useState({})
+  const [formState, setFormState] = useState<FormState>(initState);
+  const [touched, setTouched] = useState<TouchedState>({});
 
   const { values } = formState;
 
-  const onBlur = ({ target }) => setTouched((prev) => ({
-    ...prev,
-    [target.name]: true
-  }))
+  const onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name } = e.target;
+    setTouched((prev) => ({
+      ...prev,
+      [name]: true,
+    }));
+  };
 
-  const handleChange = ({ target }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormState((prev) => ({
       ...prev,
       values: {
         ...prev.values,
-        [target.name]: target.value,
+        [name]: value,
       },
-    }))
-  }
+    }));
+  };
 
-  const getInputClass = (field) => {
-    // Apply "invalid" only if the field has been touched and is empty
+  const getInputClass = (field: keyof FormValues) => {
     if (touched[field]) {
-      return values[field] ? "valid" : "invalid";
+      return values[field] ? 'valid' : 'invalid';
     }
-    return ""; // No class if it hasn't been touched yet
-  }
+    return ''; // No class if it hasn't been touched yet
+  };
 
   const onSubmit = async () => {
-    console.log(values)
+    console.log(values);
     try {
       await sendContactForm(values);
     } catch (error) {
-      console.log("error")
+      console.log('error');
     }
-  }
+  };
 
   return (
     <div className="contact__form__container">
@@ -56,26 +74,26 @@ const ContactForm = () => {
           <label>Name</label>
           <input
             type="text"
-            name='name'
+            name="name"
             value={values.name}
             required
             onChange={handleChange}
             onBlur={onBlur}
             className={getInputClass('name')}
-            placeholder='Enter your name'
+            placeholder="Enter your name"
           />
         </div>
         <div className="input__wrapper">
           <label>Email</label>
           <input
             type="email"
-            name='email'
+            name="email"
             value={values.email}
             required
             onChange={handleChange}
             onBlur={onBlur}
             className={getInputClass('email')}
-            placeholder='Enter your email'
+            placeholder="Enter your email"
           />
         </div>
       </div>
@@ -83,31 +101,33 @@ const ContactForm = () => {
         <label>Mobile Number</label>
         <input
           type="tel"
-          name='phone'
+          name="phone"
           value={values.phone}
           required
           onChange={handleChange}
           onBlur={onBlur}
           className={getInputClass('phone')}
-          placeholder='Enter your mobile number'
+          placeholder="Enter your mobile number"
         />
       </div>
       <div className="input__wrapper margin">
         <label>Message</label>
         <textarea
-          name='message'
+          name="message"
           value={values.message}
           required
           onChange={handleChange}
           onBlur={onBlur}
           className={getInputClass('message')}
-          placeholder='Enter your message'
+          placeholder="Enter your message"
           rows={4}
         />
       </div>
-      <Button onClick={onSubmit} className='contact__form__button'>Contact us</Button>
+      <Button onClick={onSubmit} className="contact__form__button">
+        Contact us
+      </Button>
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

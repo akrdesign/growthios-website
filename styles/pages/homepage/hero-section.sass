@@ -15,23 +15,29 @@
     padding-top: 20rem
     width: 100%
 
+    @media screen and (max-width: 48em)
+      padding-top: 35rem
+
     .hero__main__heading
       h1
         @extend %title-185
         text-align: center
 
+        @media screen and (max-width: 48em)
+          &.first-child
+
+
         &.first-child .word
           background: -webkit-linear-gradient(#ffffff, #ffffff73)
           -webkit-background-clip: text
           -webkit-text-fill-color: transparent
-          // transform: translateY(100%)
-          // opacity: 0
 
         &.second-child
           transform: rotate(358.5deg)
           line-height: 7rem
-          // transform: translateY(100%)
-          // opacity: 0
+
+          @media screen and (max-width: 48em)
+            line-height: 11rem
 
     .hero__svg__wrapper
       position: absolute
@@ -44,7 +50,8 @@
       margin-left: 12%
 
       @media screen and (max-width: 48em)
-        top: 70%
+        top: 87%
+        left: 40%
 
       @media screen and (min-width: 48.063em) and (max-width: 64em)
         top: 65%
@@ -54,7 +61,7 @@
         height: 28.2rem
 
         @media screen and (max-width: 48em)
-          width: 54rem
+          width: 65rem
 
         @media screen and (min-width: 48.063em) and (max-width: 64em)
           width: 70rem
@@ -74,7 +81,7 @@
     margin-top: 10rem
 
     @media screen and (max-width: 48em)
-      margin-top: 5rem
+      margin-top: 0rem
       padding: 5rem
 
     p
