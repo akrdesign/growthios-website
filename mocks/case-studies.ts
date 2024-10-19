@@ -3,7 +3,7 @@ const CASE_STUDIES = [
     id: "case-1",
     title: "KLOG Reality Solutions",
     description: 'Our client, Mr.Deepak kumar is an experienced real estate professional with over 10 years in the industry . He has primarily served at biggest real estate syndicate “Property Pistol” , hails from Kharghar he just started his company "Klog Realty Solutions" and it was his first try to online lead generation and his first choice was Growthios',
-    image: "https://images.pexels.com/photos/28824456/pexels-photo-28824456/free-photo-of-woman-in-white-shirt-looking-out-from-glass-door.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: `https://res.cloudinary.com/akrdesign/image/upload/v1729334775/growthios/klog-reality-solutions/main-image.webp`,
     isFeatured: true,
     content: {
       mainHeading: {
