@@ -6,13 +6,13 @@
   padding: 0 20rem
 
   @media screen and (max-width: 48em)
-    padding: 20rem 10rem 0 10rem
+    padding: 20rem 5rem 5rem 5rem
     grid-template-columns: 1fr
     height: auto
 
   @media screen and (min-width: 48.063em) and (max-width: 64em)
-    padding: 20rem 10rem 0 10rem
-    grid-template-columns: 1fr
+    padding: 20rem 5rem 5rem 5rem
+    gap: 5rem
     height: auto
 
   @media screen and (min-width: 64.063em) and (max-width: 90em)
@@ -24,7 +24,7 @@
     flex-direction: column
     position: relative
 
-    @media screen and (min-width: 48.063em) and (max-width: 64em)
+    @media screen and (max-width: 64em)
       align-items: center
       width: 100%
       height: 100%
@@ -67,7 +67,7 @@
       @extend %description-14
       color: $cerise_red
 
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
+      @media screen and (max-width: 48em)
         text-align: center
         max-width: 100%
         margin-top: 5rem
@@ -79,8 +79,11 @@
       width: 80%
       color: $white
 
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
+      @media screen and (max-width: 48em)
         text-align: center
+        width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
         width: 100%
 
       // .char
@@ -92,6 +95,9 @@
       color: $alto
       margin-top: 1rem
 
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
+      @media screen and (max-width: 48em)
         text-align: center
+        max-width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
         max-width: 100%

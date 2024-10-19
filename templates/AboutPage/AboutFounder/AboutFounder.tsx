@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Image } from '@/components/ui'
+import { FounderLine } from '@/components/svg'
 
 const AboutFounder = () => {
   return (
@@ -59,6 +60,7 @@ const AboutFounder = () => {
           Marketing Framework.
         </p>
       </div>
+      <FounderLine className="founder-line" />
     </section>
   )
 }

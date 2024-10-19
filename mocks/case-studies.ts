@@ -3,12 +3,12 @@ const CASE_STUDIES = [
     id: "case-1",
     title: "KLOG Reality Solutions",
     description: 'Our client, Mr.Deepak kumar is an experienced real estate professional with over 10 years in the industry . He has primarily served at biggest real estate syndicate “Property Pistol” , hails from Kharghar he just started his company "Klog Realty Solutions" and it was his first try to online lead generation and his first choice was Growthios',
-    image: '/images/case-studies/klog-reality-solutions/main-image.webp',
+    image: `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1729334775/growthios/klog-reality-solutions/main-image.webp`,
     isFeatured: true,
     content: {
       mainHeading: {
         heading: "How Growthios Boosted a Navi Mumbai Realtor's Revenue to ₹1.75 Crores in Just 90 days",
-        image: '/images/case-studies/klog-reality-solutions/main-image.webp'
+        image: `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1729334775/growthios/klog-reality-solutions/main-image.webp`,
       },
       agenda: {
         heading: "Agenda",
@@ -51,7 +51,8 @@ const CASE_STUDIES = [
       introduction: {
         heading: "Introduction",
         content: "Growthios proudly presents a transformative digital journey we undertook with a Navi mumbai based realtor. Facing challenges with insufficient lead generation, this client had just started his business so he needed consistent leads so here's how Growthios entered",
-        image: '/images/home-about.webp'
+        image: `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1729334775/growthios/klog-reality-solutions/introduction.webp`
+
       },
       clientOverview: {
         heading: "Client Overview",
@@ -68,7 +69,7 @@ const CASE_STUDIES = [
             point: "He wasn't sure about the future of leads and site visits."
           }
         ],
-        image: '/images/home-about.webp'
+        image: `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1729334775/growthios/klog-reality-solutions/challenges.webp`
       },
       joinedHand: {
         heading: "How We Joined Hands",

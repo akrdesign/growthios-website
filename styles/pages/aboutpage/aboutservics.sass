@@ -5,6 +5,17 @@
   height: 100vh
   padding: 0 20rem
 
+  @media screen and (max-width: 48em)
+    height: auto
+    padding: 10rem 5rem 5rem 5rem
+    grid-template-columns: 1fr
+    gap: 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    height: auto
+    padding: 5rem
+    gap: 5rem
+
   .about__services__Image__wrapper
     display: flex
     justify-content: center
@@ -13,6 +24,9 @@
     width: 100%
     height: 100%
     align-items: flex-end
+
+    @media screen and (max-width: 48em)
+      align-items: center
 
     .about__services__Image
       height: 58rem
@@ -24,12 +38,6 @@
       border-radius: 0.8rem
       transform: rotate(2deg)
       // transform: translateY(20rem)
-
-      @media screen and (max-width: 48em)
-        height: 80rem
-
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
-        height: 85rem
 
       img
         object-fit: cover
@@ -52,12 +60,22 @@
       @extend %description-14
       color: $cerise_red
 
+      @media screen and (max-width: 48em)
+        text-align: center
+
     .heading
       @extend %title-80
       text-transform: uppercase
       margin-top: 4rem
       width: 80%
       color: $white
+
+      @media screen and (max-width: 48em)
+        text-align: center
+        width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        width: 100%
 
     .about___services__points__wrapper
       display: flex

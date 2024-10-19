@@ -5,7 +5,7 @@ const CaseStudyHero = ({ items }) => {
   return (
     <section className="case__study__hero__section">
       <div className="case__study__hero__top">
-        <h5 className="badge">Founder</h5>
+        <h5 className="badge">Case Studies</h5>
         <h1 className="heading">
           Transforming Visions into Reality A Look at Our Successes
         </h1>

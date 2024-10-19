@@ -25,6 +25,9 @@
       text-align: center
       width: 50%
 
+      @media screen and (max-width: 48em)
+        width: 100%
+
       @media screen and (min-width: 48.063em) and (max-width: 64em)
         text-align: center
         width: 100%
@@ -36,4 +39,11 @@
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 8rem
+
+      @media screen and (max-width: 48em)
+        grid-template-columns: 1fr
+        gap: 3rem
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        grid-template-columns: 1fr 1fr
 
