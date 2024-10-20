@@ -1,10 +1,14 @@
-import { Facebook, Instagram, LinkedIn, Logo } from '@/components/svg'
 import Link from 'next/link'
 import React from 'react'
+import { Facebook, Instagram, LinkedIn, Logo } from '@/components/svg'
 
-const Footer = () => {
+type footerType = {
+  className?: string
+}
+
+const Footer = ({ className }: footerType ) => {
   return (
-    <footer>
+    <footer className={className}>
       <div className="footer__top__wrapper">
         <div className="footer__logo__wrapper">
           <Logo />
@@ -39,9 +43,9 @@ const Footer = () => {
       </div>
       <div className="footer__bottom__wrapper">
         <p>© {new Date().getFullYear()} Growthios. All rights reserved.</p>
-        <Link href="">Terms and Conditions</Link>
-        <Link href="">Privacy Policy</Link>
-        <Link href="">Refund</Link>
+        <Link href="/terms-and-conditions">Terms and Conditions</Link>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href="/refund-policy">Refund Policy</Link>
       </div>
     </footer>
   )

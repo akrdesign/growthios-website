@@ -45,12 +45,6 @@ const SingleCaseStudy = ({ caseStudy }) => {
       )}
       {caseStudy?.content?.introduction && (
         <section className="case__study__introduction__section">
-          <div className="case__study__introduction__image__wrapper">
-            <div className="case__study__introduction__image">
-              <Image src={caseStudy?.content?.introduction?.image} alt="growthios" sizes="100%" fill priority />
-            </div>
-            <div className="backdrop"></div>
-          </div>
           <div className="case__study__introduction__content__wrapper">
             <h1 className="heading">{caseStudy?.content?.introduction?.heading}</h1>
             <p className="description">
@@ -61,6 +55,12 @@ const SingleCaseStudy = ({ caseStudy }) => {
       )}
       {caseStudy?.content?.clientOverview && (
         <section className="case__study__clientOverview__section">
+          <div className="case__study__clientOverview__image__wrapper">
+            <div className="case__study__clientOverview__image">
+              <Image src={caseStudy?.content?.clientOverview?.image} alt="growthios" sizes="100%" fill priority />
+            </div>
+            <div className="backdrop"></div>
+          </div>
           <div className="case__study__clientOverview__content__wrapper">
             <h1 className="heading">{caseStudy?.content?.clientOverview?.heading}</h1>
             <p className="description">
@@ -69,6 +69,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
           </div>
         </section>
       )}
+
       {caseStudy?.content?.clientChallenges && (
         <section className="case__study__clientChallenges__section">
           <div className="case__study__clientChallenges__content__wrapper">
@@ -104,9 +105,60 @@ const SingleCaseStudy = ({ caseStudy }) => {
           </div>
         </section>
       )}
-      <section>
+      {caseStudy?.content?.strategy && (
+        <section className="case__study__strategy__section">
+          <div className="case__study__strategy__image__wrapper">
+            <div className="case__study__strategy__image">
+              <Image src={caseStudy?.content?.strategy?.image} alt="growthios" sizes="100%" fill priority />
+            </div>
+            <div className="backdrop"></div>
+          </div>
+          <div className="case__study__strategy__content__wrapper">
+            <h1 className="heading">{caseStudy?.content?.strategy?.heading}</h1>
+            <p className="description">
+            {caseStudy?.content?.strategy?.content}
+            </p>
+          </div>
+        </section>
+      )}
+      {caseStudy?.content?.campaignHighlights && (
+        <section className="case__study__campaignHighlights__section">
+          <div className="case__study__campaignHighlights__content__wrapper">
+            <h1 className="heading">{caseStudy?.content?.campaignHighlights?.heading}</h1>
+            {caseStudy?.content?.campaignHighlights.content.map((item, index) => (
+              <div className="case__study__campaignHighlights__points__wrapper" key={index}>
+                <PointIcon />
+                <h1>{item.point.heading}:</h1>
+                {/* Check if content is a string or an array */}
+                {typeof item.point.content === 'string' ? (
+                  <span>{item.point.content}</span>  // Render as string
+                ) : (
+                  <ul>
+                    {/* Render as a list if it's an array */}
+                    {item.point.content.map((subItem, subIndex) => (
+                      <li key={subIndex}>
+                        <span>{subItem.point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
-      </section>
+      {caseStudy?.content?.achievements && (
+        <section className="case__study__achievements__section">
+          <h1 className="heading">{caseStudy?.content?.achievements?.heading}</h1>
+          <div className="case__study__achievements__image">
+            <Image src={caseStudy?.content?.achievements?.image} alt="growthios" sizes="100%" fill priority />
+          </div>
+          <p className="description">
+          {caseStudy?.content?.achievements?.content}
+          </p>
+        </section>
+      )}
     </>
   )
 }

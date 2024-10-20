@@ -56,8 +56,8 @@ const CASE_STUDIES = [
       },
       clientOverview: {
         heading: "Client Overview",
-        content: "Our client,Mr.Deepak kumar is an experienced real estate professional with over 10 years in the industry . He has primarily served at biggest real estate syndicate “Property Pistol” , hails from Kharghar he just started his company 'Klog Realty Solutions' and it was his first try to online lead generation and his first choice was Growthios",
-        image: '/images/home-about.webp'
+        content: "Our client, Mr.Deepak kumar is an experienced real estate professional with over 10 years in the industry . He has primarily served at biggest real estate syndicate “Property Pistol” , hails from Kharghar he just started his company 'Klog Realty Solutions' and it was his first try to online lead generation and his first choice was Growthios",
+        image: 'https://res.cloudinary.com/akrdesign/image/upload/v1729426162/growthios/klog-reality-solutions/client-image.webp'
       },
       clientChallenges: {
         heading: "Challenges Faced by Client",
@@ -78,7 +78,8 @@ const CASE_STUDIES = [
       },
       strategy: {
         heading: "Growthios' Winning Strategy",
-        content: "We zoomed in on Facebook Ads, an efficient and cost-effective solution for precise audience targeting. We created compelling ads with Persuasive copies."
+        content: "We zoomed in on Facebook Ads, an efficient and cost-effective solution for precise audience targeting. We created compelling ads with Persuasive copies.",
+        image: '/images/home-about.webp'
       },
       campaignHighlights: {
         heading: "Campaign Highlights",
@@ -133,9 +134,9 @@ const CASE_STUDIES = [
         ]
       },
       achievements: {
-        heading: "Achievements",
+        heading: "Achievements with Growthios",
         content: "3 Sales × 58 lakhs (Avg) = 1.75 crores ( 2 Booking got cancelled )",
-        image: '/images/home-about.webp'
+        image: 'https://res.cloudinary.com/akrdesign/image/upload/v1729425238/growthios/klog-reality-solutions/achievements.webp'
       },
       success: {
         heading: "Evidence of Success",
