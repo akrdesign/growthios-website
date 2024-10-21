@@ -131,7 +131,8 @@ const CASE_STUDIES = [
         images: [
           {image: '/images/home-about.webp'},
           {image: '/images/home-about.webp'},
-        ]
+        ],
+        video: "https://res.cloudinary.com/akrdesign/video/upload/v1729513059/growthios/klog-reality-solutions/ads-video.mp4"
       },
       achievements: {
         heading: "Achievements with Growthios",

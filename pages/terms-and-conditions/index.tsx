@@ -12,7 +12,7 @@ export default function TermsAndConditions() {
           Effective Date: <span className="color">22nd march 2023</span>
         </h2>
         <h2>
-          Welcome to Growthios! These Terms and Conditions ("Terms") govern your
+          Welcome to Growthios! These Terms and Conditions (`&ldquo;`Terms`&ldquo;`) govern your
           use of our website and the services provided by Growthios. By
           accessing or using our website, you agree to be bound by these Terms.
           If you do not agree to these Terms, please refrain from using our

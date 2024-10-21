@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { Facebook, Instagram, LinkedIn, Logo } from '@/components/svg'
+import { Facebook, Instagram, LinkedIn } from '@/components/svg'
+import { Image } from '@/components/ui'
 
 type footerType = {
   className?: string
@@ -10,8 +11,10 @@ const Footer = ({ className }: footerType ) => {
   return (
     <footer className={className}>
       <div className="footer__top__wrapper">
-        <div className="footer__logo__wrapper">
-          <Logo />
+        <div className="footer__logo__container">
+          <div className="footer__logo__wrapper">
+            <Image src='/images/logo.png' alt='growthios logo' sizes='100%' fill />
+          </div>
         </div>
         <nav>
           <ul>

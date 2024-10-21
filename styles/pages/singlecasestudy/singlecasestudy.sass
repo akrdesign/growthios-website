@@ -3,6 +3,13 @@
   width: 100%
   height: 100vh
 
+  @media screen and (max-width: 48em)
+    padding: 20rem 5rem 5rem 5rem
+    height: 90vh
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 15rem 5rem 5rem 5rem
+
   .single__case__study__image__wrapper
     display: flex
     justify-content: center
@@ -68,12 +75,18 @@
 
         @media screen and (min-width: 48.063em) and (max-width: 64em)
           text-align: center
-          width: 100%
+          width: 60%
 
 .case__study__agenda__section
   padding: 10rem 20rem 20rem 20rem
   width: 100%
   // height: 100vh
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
 
   .case__study__agenda__top
     display: flex
@@ -101,6 +114,13 @@
     margin-top: 5rem
     place-items: center
 
+    @media screen and (max-width: 48em)
+      grid-template-columns: 1fr
+      gap: 3rem
+
+    @media screen and (min-width: 48.063em) and (max-width: 64em)
+      gap: 3rem
+
     .workflow__card__cover
       display: flex
       flex-direction: row
@@ -110,14 +130,20 @@
       box-shadow: 0rem 2.8rem 2.8rem rgba(24, 23, 44, 0.32)
       border-radius: 2.4rem
       background-color: $white
-      width: 80%
+      width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        padding: 1rem
 
       &.transparent
         background-color: #ffffff00
 
+        @media screen and (max-width: 48em)
+          display: none
+
       svg
-        width: 5.8rem
-        height: 5.8rem
+        min-width: 5.8rem
+        min-height: 5.8rem
 
       h1
         @extend %title-22
@@ -130,15 +156,28 @@
   // height: 100vh
   padding: 0 20rem 20rem 20rem
 
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+    grid-template-columns: 1fr
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
+    gap: 5rem
+
   .case__study__clientOverview__image__wrapper
     display: flex
     justify-content: center
     flex-direction: column
     position: relative
 
+    @media screen and (max-width: 64em)
+      align-items: center
+      width: 100%
+      height: 100%
+
     .case__study__clientOverview__image
       height: 58rem
-      max-width: 48rem
+      width: 48rem
       overflow: hidden
       position: relative
       // transform-origin: left top
@@ -148,10 +187,10 @@
       // transform: translateY(20rem)
 
       @media screen and (max-width: 48em)
-        height: 80rem
+        height: 58rem
 
       @media screen and (min-width: 48.063em) and (max-width: 64em)
-        height: 85rem
+        height: 58rem
 
       img
         object-fit: cover
@@ -176,14 +215,34 @@
       width: 80%
       color: $white
 
+      @media screen and (max-width: 48em)
+        text-align: center
+        width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        width: 100%
+
     .description
       @extend %description-16
       max-width: 80%
       color: $alto
       margin-top: 4rem
 
+      @media screen and (max-width: 48em)
+        text-align: center
+        max-width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        max-width: 100%
+
 .case__study__introduction__section
   padding: 0 20rem 20rem 20rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
 
   .case__study__introduction__content__wrapper
     display: flex
@@ -199,6 +258,9 @@
       color: $white
       text-align: center
 
+      @media screen and (max-width: 48em)
+        width: 100%
+
     .description
       @extend %description-16
       max-width: 50%
@@ -206,12 +268,27 @@
       margin-top: 4rem
       text-align: center
 
+      @media screen and (max-width: 48em)
+        max-width: 100%
+
+      @media screen and (min-width: 48.063em) and (max-width: 64em)
+        max-width: 80%
+
 .case__study__clientChallenges__section
   display: grid
   grid-template-columns: 1fr 1fr
   width: 100%
   // height: 100vh
   padding: 0 20rem 20rem 20rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+    grid-template-columns: 1fr
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
+    gap: 5rem
+    grid-template-columns: 1fr
 
   .case__study__clientChallenges__image__wrapper
     display: flex
@@ -221,6 +298,10 @@
     width: 100%
     height: 100%
     align-items: flex-end
+
+    @media screen and (max-width: 64em)
+      align-items: center
+      display: none
 
     .case__study__clientChallenges__image
       height: 58rem
@@ -232,12 +313,6 @@
       border-radius: 0.8rem
       transform: rotate(2deg)
       // transform: translateY(20rem)
-
-      @media screen and (max-width: 48em)
-        height: 80rem
-
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
-        height: 85rem
 
       img
         object-fit: cover
@@ -256,12 +331,19 @@
     justify-content: center
     flex-direction: column
 
+    @media screen and (max-width: 64em)
+      align-items: center
+
     .heading
       @extend %title-80
       text-transform: uppercase
       margin-top: 4rem
       width: 80%
       color: $white
+
+      @media screen and (max-width: 64em)
+        text-align: center
+        width: 100%
 
     .case__study__clientChallenges__point
       display: flex
@@ -281,8 +363,8 @@
         transform: rotate(2deg)
 
       svg
-        width: 5.8rem
-        height: 5.8rem
+        min-width: 5.8rem
+        min-height: 5.8rem
 
       h1
         @extend %title-22
@@ -293,6 +375,14 @@
   grid-template-columns: 1fr 1fr
   padding: 0 20rem 20rem 20rem
   gap: 10rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+    grid-template-columns: 1fr
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
+    gap: 5rem
 
   .case__study__joinedHand__content__wrapper
     display: flex
@@ -307,12 +397,18 @@
       color: $white
       text-align: center
 
+      @media screen and (max-width: 64em)
+        width: 100%
+
     .description
       @extend %description-16
       max-width: 80%
       color: $alto
       margin-top: 4rem
       text-align: center
+
+      @media screen and (max-width: 64em)
+        max-width: 100%
 
   .case__study__strategy__content__wrapper
     display: flex
@@ -327,6 +423,9 @@
       color: $white
       text-align: center
 
+      @media screen and (max-width: 64em)
+        width: 100%
+
     .description
       @extend %description-16
       max-width: 80%
@@ -334,67 +433,76 @@
       margin-top: 4rem
       text-align: center
 
-.case__study__strategy__section
-  display: grid
-  grid-template-columns: 1fr 1fr
-  width: 100%
-  // height: 100vh
-  padding: 0 20rem 20rem 20rem
+      @media screen and (max-width: 64em)
+        max-width: 100%
 
-  .case__study__strategy__image__wrapper
-    display: flex
-    justify-content: center
-    flex-direction: column
-    position: relative
+// .case__study__strategy__section
+//   display: grid
+//   grid-template-columns: 1fr 1fr
+//   width: 100%
+//   // height: 100vh
+//   padding: 0 20rem 20rem 20rem
 
-    .case__study__strategy__image
-      height: 58rem
-      max-width: 48rem
-      overflow: hidden
-      position: relative
-      // transform-origin: left top
-      z-index: 2
-      border-radius: 0.8rem
-      transform: rotate(2deg)
-      // transform: translateY(20rem)
+//   .case__study__strategy__image__wrapper
+//     display: flex
+//     justify-content: center
+//     flex-direction: column
+//     position: relative
 
-      @media screen and (max-width: 48em)
-        height: 80rem
+//     .case__study__strategy__image
+//       height: 58rem
+//       max-width: 48rem
+//       overflow: hidden
+//       position: relative
+//       // transform-origin: left top
+//       z-index: 2
+//       border-radius: 0.8rem
+//       transform: rotate(2deg)
+//       // transform: translateY(20rem)
 
-      @media screen and (min-width: 48.063em) and (max-width: 64em)
-        height: 85rem
+//       @media screen and (max-width: 48em)
+//         height: 80rem
 
-      img
-        object-fit: cover
+//       @media screen and (min-width: 48.063em) and (max-width: 64em)
+//         height: 85rem
 
-    .backdrop
-      height: 58rem
-      width: 48rem
-      position: absolute
-      background: $cerise_red
-      z-index: 1
-      border-radius: 0.8rem
+//       img
+//         object-fit: cover
 
-  .case__study__strategy__content__wrapper
-    display: flex
-    justify-content: center
-    flex-direction: column
+//     .backdrop
+//       height: 58rem
+//       width: 48rem
+//       position: absolute
+//       background: $cerise_red
+//       z-index: 1
+//       border-radius: 0.8rem
 
-    .heading
-      @extend %title-80
-      text-transform: uppercase
-      margin-top: 4rem
-      width: 80%
-      color: $white
+//   .case__study__strategy__content__wrapper
+//     display: flex
+//     justify-content: center
+//     flex-direction: column
 
-    .description
-      @extend %description-16
-      max-width: 80%
-      color: $alto
-      margin-top: 4rem
+//     .heading
+//       @extend %title-80
+//       text-transform: uppercase
+//       margin-top: 4rem
+//       width: 80%
+//       color: $white
+
+//     .description
+//       @extend %description-16
+//       max-width: 80%
+//       color: $alto
+//       margin-top: 4rem
 
 .case__study__campaignHighlights__section
   padding: 0 20rem 20rem 20rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
 
   .case__study__campaignHighlights__content__wrapper
     .heading
@@ -404,26 +512,47 @@
       width: 80%
       color: $white
 
+      @media screen and (max-width: 64em)
+        width: 100%
+        text-align: center
+
     .case__study__campaignHighlights__points__wrapper
       display: flex
       align-items: center
       gap: 3rem
       margin-top: 2rem
 
+      @media screen and (max-width: 48em)
+        flex-direction: column
+        gap: 1rem
+        margin-top: 5rem
+
       svg
-        width: 8rem
-        height: 8rem
+        min-width: 8rem
+        min-height: 8rem
 
       h1
         @extend %title-22
         color: $white
 
+        @media screen and (max-width: 48em)
+          text-align: center
+
       span, li
         @extend %description-16
         color: $alto
 
+        @media screen and (max-width: 48em)
+          text-align: center
+
 .case__study__achievements__section
   padding: 0 20rem 20rem 20rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
 
   .heading
     @extend %title-80
@@ -438,11 +567,34 @@
     height: 80rem
     margin: 5rem 0
 
+    @media screen and (max-width: 48em)
+      height: 38rem
+
+    @media screen and (min-width: 48.063em) and (max-width: 64em)
+      height: 47rem
+
     img
-      object-fit: cover
+      object-fit: contain
 
   .description
     @extend %description-16
     color: $alto
     margin-top: 4rem
     text-align: center
+
+.case__study__adsPresentation__section
+  padding: 0 20rem 20rem 20rem
+
+  @media screen and (max-width: 48em)
+    padding: 5rem 5rem 5rem 5rem
+
+  @media screen and (min-width: 48.063em) and (max-width: 64em)
+    padding: 10rem 10rem 10rem 10rem
+
+  .heading
+    @extend %title-80
+    text-transform: uppercase
+    margin-top: 4rem
+    color: $white
+    text-align: center
+    margin-bottom: 5rem

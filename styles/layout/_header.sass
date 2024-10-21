@@ -1,4 +1,4 @@
-header
+.desktop__header
   position: fixed
   top: 2rem
   left: 50%
@@ -10,6 +10,9 @@ header
     top: 6rem
     width: 90%
 
+  @media screen and (max-width: 64em)
+    display: none
+
   .header__wrapper
     display: flex
     justify-content: space-between
@@ -18,7 +21,17 @@ header
     padding: 1rem 1rem 1rem 5rem
     border-radius: 100vw
 
+    .header__logo__wrapper
+      flex: 2
+      position: relative
+      width: 20rem
+      height: 5rem
+
+      img
+        object-fit: contain
+
     nav
+      flex: 1
       ul
         display: flex
         align-items: center
@@ -33,3 +46,96 @@ header
 
             &.active
               color: $cerise_red
+
+    .header__button
+      flex: 1
+      justify-content: flex-end
+      display: flex
+
+.mobile__header
+  position: fixed
+  top: 2rem
+  left: 50%
+  width: 80%
+  transform: translateX(-50%)
+  z-index: z('header')
+
+  @media screen and (min-width: 64.063em)
+    display: none
+
+  .header__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $white
+    padding: 1rem 2rem
+    border-radius: 10rem
+    z-index: 2
+    position: relative
+
+    &.active
+      border-radius: 10rem
+
+    .header__logo__wrapper
+      position: relative
+      width: 20rem
+      height: 5rem
+
+      img
+        object-fit: contain
+
+    .hamburger
+      cursor: pointer
+
+      div
+        width: 3rem
+        height: 0.3rem
+        margin: 0.5rem
+        background: $black
+        transition: all 1s ease
+
+        &.active
+          transition: all 0s ease
+
+          &.bars1
+            transform: rotate(-45deg) translate(-6px, 6px)
+            transition: all 1s ease
+
+          &.bars2
+            transition: all 0s ease
+            width: 0
+
+          &.bars3
+            transform: rotate(45deg) translate(0, 0)
+            transition: all 1s ease
+
+  .nav__wrapper
+    background-color: $white
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    margin-top: -4rem
+    padding: 10rem 2rem
+    z-index: 1
+    position: relative
+    border-end-end-radius: 4rem
+    border-end-start-radius: 4rem
+
+    ul
+      display: flex
+      align-items: center
+      gap: 3rem
+      flex-direction: column
+
+      li
+        a
+          @extend %title-22
+          text-transform: none
+          text-decoration: none
+          color: $black
+
+          &.active
+            color: $cerise_red
+
+    .header__button
+      display: flex
+      justify-content: center
+      margin-top: 5rem

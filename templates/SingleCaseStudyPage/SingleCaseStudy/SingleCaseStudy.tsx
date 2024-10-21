@@ -1,10 +1,11 @@
 
 
 import { PointIcon } from '@/components/svg'
-import { Image } from '@/components/ui'
+import { Image, Video } from '@/components/ui'
 import React from 'react'
 
 const SingleCaseStudy = ({ caseStudy }) => {
+  const adsVideo = caseStudy?.content?.adsPresentation?.video
   return (
     <>
       <section className="single__case__study__main__section">
@@ -105,7 +106,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
           </div>
         </section>
       )}
-      {caseStudy?.content?.strategy && (
+      {/* {caseStudy?.content?.strategy && (
         <section className="case__study__strategy__section">
           <div className="case__study__strategy__image__wrapper">
             <div className="case__study__strategy__image">
@@ -120,7 +121,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
             </p>
           </div>
         </section>
-      )}
+      )} */}
       {caseStudy?.content?.campaignHighlights && (
         <section className="case__study__campaignHighlights__section">
           <div className="case__study__campaignHighlights__content__wrapper">
@@ -129,12 +130,10 @@ const SingleCaseStudy = ({ caseStudy }) => {
               <div className="case__study__campaignHighlights__points__wrapper" key={index}>
                 <PointIcon />
                 <h1>{item.point.heading}:</h1>
-                {/* Check if content is a string or an array */}
                 {typeof item.point.content === 'string' ? (
-                  <span>{item.point.content}</span>  // Render as string
+                  <span>{item.point.content}</span>
                 ) : (
                   <ul>
-                    {/* Render as a list if it's an array */}
                     {item.point.content.map((subItem, subIndex) => (
                       <li key={subIndex}>
                         <span>{subItem.point}</span>
@@ -145,6 +144,13 @@ const SingleCaseStudy = ({ caseStudy }) => {
               </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {caseStudy?.content?.adsPresentation && (
+        <section className="case__study__adsPresentation__section">
+          <h1 className="heading">{caseStudy?.content?.adsPresentation?.heading}</h1>
+          {caseStudy?.content?.adsPresentation?.video && <Video src={caseStudy?.content?.adsPresentation?.video} />}
         </section>
       )}
 
@@ -159,6 +165,8 @@ const SingleCaseStudy = ({ caseStudy }) => {
           </p>
         </section>
       )}
+
+
     </>
   )
 }
