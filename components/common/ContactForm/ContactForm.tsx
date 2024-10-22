@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+
 import { Button } from '@/components/ui'
 import { sendContactForm } from '@/lib/api'
 
@@ -29,6 +31,8 @@ const initState: FormState = { values: initValues };
 const ContactForm = () => {
   const [formState, setFormState] = useState<FormState>(initState);
   const [touched, setTouched] = useState<TouchedState>({});
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const { values } = formState;
 
@@ -59,11 +63,19 @@ const ContactForm = () => {
   };
 
   const onSubmit = async () => {
-    console.log(values);
     try {
       await sendContactForm(values);
+      setMessage("Message sent successfully!")
+      setSuccess(true)
+      setFormState(initState)
+      setTouched({})
+      setTimeout(() => {
+        setMessage("")
+        setSuccess(false)
+      }, 3000)
     } catch (error) {
-      console.log('error');
+      setMessage(error)
+      setSuccess(false)
     }
   };
 
@@ -126,6 +138,7 @@ const ContactForm = () => {
       <Button onClick={onSubmit} className="contact__form__button">
         Contact us
       </Button>
+      {message && <p className={success ? "message success" : "message error"}>{message}</p>}
     </div>
   );
 };

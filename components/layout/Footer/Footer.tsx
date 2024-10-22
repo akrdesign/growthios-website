@@ -22,13 +22,13 @@ const Footer = ({ className }: footerType ) => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">About us</Link>
+              <Link href="/about-us">About us</Link>
             </li>
             <li>
-              <Link href="/">Case studies</Link>
+              <Link href="/case-studies">Case studies</Link>
             </li>
             <li>
-              <Link href="/">Contact us</Link>
+              <Link href="/contact-us">Contact us</Link>
             </li>
           </ul>
         </nav>

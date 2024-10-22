@@ -1,9 +1,14 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FC } from 'react'
+import { Image } from '@/components/ui'
+
+type image = {
+  image: string
+}
 
 interface LogoMarqueeProps {
-  logos: React.ComponentType[]
+  logos: image[]
 }
 
 const LogoMarquee: FC<LogoMarqueeProps> = ({ logos }) => {
@@ -38,10 +43,11 @@ const LogoMarquee: FC<LogoMarqueeProps> = ({ logos }) => {
     <div className="companies__logo__container">
       <div className="companies__logo__wrapper">
         <div className="companies__logo__cover">
-          {logos.map((LogoComponent, index) => (
+          {logos.map((item, index) => (
             <div className="logo__wrapper" key={index}>
               <div className="logo">
-                <LogoComponent />
+                {/* <LogoComponent /> */}
+                <Image src={item.image} alt='logo' sizes='100%' fill />
               </div>
             </div>
           ))}

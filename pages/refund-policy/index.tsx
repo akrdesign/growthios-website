@@ -1,8 +1,42 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+
 import { Footer, Header } from '@/components/layout'
 import useSmoothScroll from '@/hooks/use-smooth-scroll'
 
 export default function RefundPolicy() {
   useSmoothScroll()
+
+  useGSAP(() => {
+    gsap.from(".refund__policy__section h2", {
+      opacity: 0,
+      y: 100,
+      ease: 'Power2.easeOut',
+      duration: 1,
+      stagger: 0.1,
+      delay: 0.8
+    })
+
+    gsap.from(".refund__policy__section h1", {
+      opacity: 0,
+      y: 100,
+      ease: 'Power2.easeOut',
+      duration: 1,
+      stagger: 0.1,
+      delay: 0.8
+    })
+
+    gsap.from(".refund__policy__section li", {
+      opacity: 0,
+      y: 100,
+      ease: 'Power2.easeOut',
+      duration: 1,
+      stagger: { amount: 1 },
+      delay: 0.8
+    })
+
+
+  }, [])
 
   return (
     <>

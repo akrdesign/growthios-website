@@ -1,20 +1,20 @@
 [
   {
-    "image": "/images/testimonial/01.webp",
-    "clientName": "Mr.Rupesh Pawar",
+    "image": "/images/testimonial/rupesh-pawar.webp",
+    "clientName": "Mr. Rupesh Pawar",
     "position": "Founder - Lease for you",
     "clientWord": "Growthios helped us hit sales targets we never thought possible!",
     "companyLogo": "/svg/companylogo/01.svg"
   },
   {
-    "image": "/images/testimonial/01.webp",
-    "clientName": "Mr.Deepak Kumar",
+    "image": "/images/testimonial/deepak-kumar.webp",
+    "clientName": "Mr. Deepak Kumar",
     "position": "Founder - Klog Realty Solutions",
     "clientWord": "Our lead quality and site visits skyrocketed after partnering with Growthios.",
     "companyLogo": "/svg/companylogo/01.svg"
   },
   {
-    "image": "/images/testimonial/01.webp",
+    "image": "/images/testimonial/anil-vishwakarma.webp",
     "clientName": "Anil Vishwakarma",
     "position": "Marketing Head - Naman Home makers",
     "clientWord": "We almost sold the unsellable product because of growthios",
@@ -29,7 +29,7 @@
   },
   {
     "image": "/images/testimonial/01.webp",
-    "clientName": "Mr.Mohit Mishra",
+    "clientName": "Mr. Mohit Mishra",
     "position": "Founder - La Pincode Properties",
     "clientWord": "Professional, result-oriented, and always delivering on promises!",
     "companyLogo": "/svg/companylogo/01.svg"

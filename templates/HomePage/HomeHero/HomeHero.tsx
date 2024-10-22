@@ -5,23 +5,7 @@ import { BlueCircle } from '@/components/svg'
 import { useGSAP } from '@gsap/react'
 import { Button } from '@/components/ui'
 import { LogoMarquee } from '@/components/common'
-import {
-  CompanyLogo1,
-  CompanyLogo2,
-  CompanyLogo3,
-  CompanyLogo4,
-  CompanyLogo5,
-  CompanyLogo6,
-} from '@/components/svg'
-
-const logosArray = [
-  CompanyLogo1,
-  CompanyLogo2,
-  CompanyLogo3,
-  CompanyLogo4,
-  CompanyLogo5,
-  CompanyLogo6,
-]
+import { marquee } from '@/mocks/index'
 
 const HomeHero = () => {
   useGSAP(() => {
@@ -300,7 +284,7 @@ const HomeHero = () => {
             measurable results for your business.
           </p>
         </div>
-        <LogoMarquee logos={logosArray} />
+        <LogoMarquee logos={marquee} />
         <BlueCircle className="hero__blue_circle" />
       </section>
     </>
