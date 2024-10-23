@@ -19,16 +19,16 @@ const Footer = ({ className }: footerType ) => {
         <nav>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link className='hover-underline-animation-white' href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about-us">About us</Link>
+              <Link className='hover-underline-animation-white' href="/about-us">About us</Link>
             </li>
             <li>
-              <Link href="/case-studies">Case studies</Link>
+              <Link className='hover-underline-animation-white' href="/case-studies">Case studies</Link>
             </li>
             <li>
-              <Link href="/contact-us">Contact us</Link>
+              <Link className='hover-underline-animation-white' href="/contact-us">Contact us</Link>
             </li>
           </ul>
         </nav>
@@ -46,9 +46,9 @@ const Footer = ({ className }: footerType ) => {
       </div>
       <div className="footer__bottom__wrapper">
         <p>© {new Date().getFullYear()} Growthios. All rights reserved.</p>
-        <Link href="/terms-and-conditions">Terms and Conditions</Link>
-        <Link href="/privacy-policy">Privacy Policy</Link>
-        <Link href="/refund-policy">Refund Policy</Link>
+        <Link className='hover-underline-animation-alto' href="/terms-and-conditions">Terms and Conditions</Link>
+        <Link className='hover-underline-animation-alto' href="/privacy-policy">Privacy Policy</Link>
+        <Link className='hover-underline-animation-alto' href="/refund-policy">Refund Policy</Link>
       </div>
     </footer>
   )

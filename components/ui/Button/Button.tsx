@@ -7,7 +7,8 @@ type ButtonProps = {
   type?: 'submit' | 'reset' | 'button' | undefined
   replace?: boolean
   actionLink?: string
-  onClick?: () => void
+  onClick?: () => void,
+  disabled?: boolean
 }
 
 const Button = ({
@@ -17,6 +18,7 @@ const Button = ({
   type,
   replace,
   onClick,
+  disabled
 }: ButtonProps) => {
 
   if (link) {
@@ -35,6 +37,7 @@ const Button = ({
       type={type || 'button'}
       onClick={onClick}
       className={`button__wrapper ${className}`}
+      disabled={disabled}
     >
       <div>{children}</div>
     </button>

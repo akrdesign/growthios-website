@@ -74,7 +74,7 @@ const ContactForm = () => {
         setSuccess(false)
       }, 3000)
     } catch (error) {
-      setMessage(error)
+      setMessage(error.message)
       setSuccess(false)
     }
   };
@@ -135,7 +135,7 @@ const ContactForm = () => {
           rows={4}
         />
       </div>
-      <Button onClick={onSubmit} className="contact__form__button">
+      <Button onClick={onSubmit} className="contact__form__button" disabled={!values.name && !values.email && !values.phone && !values.message}>
         Contact us
       </Button>
       {message && <p className={success ? "message success" : "message error"}>{message}</p>}

@@ -35,3 +35,66 @@ body
   background: $white
   border-radius: 100vw
   cursor: pointer
+
+.hover-underline-animation-blue
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    transform: scaleX(0)
+    height: 0.2rem
+    bottom: -0.2rem
+    left: 0
+    background-color: $cerise_red
+    transition: transform 0.25s ease-out
+    transform-origin: bottom right
+
+  &:hover::after
+    transform: scaleX(1)
+
+  &:hover::after
+    transform-origin: bottom left
+
+.hover-underline-animation-white
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    transform: scaleX(0)
+    height: 0.2rem
+    bottom: -0.2rem
+    left: 0
+    background-color: $white
+    transition: transform 0.25s ease-out
+    transform-origin: bottom right
+
+  &:hover::after
+    transform: scaleX(1)
+
+  &:hover::after
+    transform-origin: bottom left
+
+.hover-underline-animation-alto
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    transform: scaleX(0)
+    height: 0.2rem
+    bottom: -0.2rem
+    left: 0
+    background-color: $alto
+    transition: transform 0.25s ease-out
+    transform-origin: bottom right
+
+  &:hover::after
+    transform: scaleX(1)
+
+  &:hover::after
+    transform-origin: bottom left

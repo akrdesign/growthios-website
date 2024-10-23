@@ -67,6 +67,7 @@ const AboutServices = () => {
       opacity: 0,
       y: 100,
       ease: 'Power2.easeOut',
+      stagger: 0.1,
       duration: 1,
     }, 0)
 

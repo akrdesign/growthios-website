@@ -67,16 +67,16 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <Link className={router.pathname == '/' ? 'active' : ''} href="/">Home</Link>
+                <Link className={router.pathname == '/' ? 'active hover-underline-animation-blue' : ' hover-underline-animation-blue'} href="/">Home</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/about-us' ? 'active' : ''} href="/about-us">About us</Link>
+                <Link className={router.pathname == '/about-us' ? 'active hover-underline-animation-blue' : ' hover-underline-animation-blue'} href="/about-us">About us</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/case-studies' ? 'active' : ''} href="/case-studies">Case studies</Link>
+                <Link className={router.pathname == '/case-studies' ? 'active hover-underline-animation-blue' : ' hover-underline-animation-blue'} href="/case-studies">Case studies</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/contact-us' ? 'active' : ''} href="/contact-us">Contact us</Link>
+                <Link className={router.pathname == '/contact-us' ? 'active hover-underline-animation-blue' : ' hover-underline-animation-blue'} href="/contact-us">Contact us</Link>
               </li>
             </ul>
           </nav>
