@@ -56,7 +56,7 @@ const AboutPageHero = () => {
     <section className="about__page__hero__section">
       <div className="about__hero__image__wrapper">
         <div className="about__hero__image">
-          <Image src="/images/home-about.webp" alt="" sizes="100%" fill />
+          <Image src="/images/about-hero.webp" alt="grothios" sizes="100%" fill />
         </div>
         <div className="backdrop"></div>
       </div>

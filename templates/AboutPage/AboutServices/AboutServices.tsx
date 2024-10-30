@@ -99,7 +99,7 @@ const AboutServices = () => {
       </div>
       <div className="about__services__Image__wrapper">
         <div className="about__services__Image">
-          <Image src="/images/home-about.webp" alt="" sizes="100%" fill priority />
+          <Image src="/images/about-services.webp" alt="grothios" sizes="100%" fill priority />
         </div>
         <div className="backdrop"></div>
       </div>

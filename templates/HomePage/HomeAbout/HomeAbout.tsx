@@ -71,7 +71,7 @@ const HomeAbout = () => {
     <section className="home__about__section" ref={sectionRef}>
       <div className="home__about__image__wrapper">
         <div className="home__about__image">
-          <Image src="/images/home-about.webp" alt="" sizes="100%" fill />
+          <Image src="/images/home-about.webp" alt="grothios" sizes="100%" fill />
         </div>
         <div className="backdrop"></div>
       </div>
