@@ -1,13 +1,47 @@
+import { useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 import { Button, Image } from '@/components/ui'
-import { useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/router'
 
 const Header = () => {
   const [menuClicked, setMenuClicked] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const lastScrollY = useRef(0)
+  const ticking = useRef(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY
+          const isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 10
+
+          if (currentScrollY < lastScrollY.current || // Scrolling up
+              currentScrollY <= 0 || // At top
+              isBottom) { // At bottom
+            setIsHidden(false)
+          }
+
+          else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+            setIsHidden(true)
+          }
+
+          lastScrollY.current = currentScrollY
+          ticking.current = false
+        })
+        ticking.current = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const headerRef = useRef(null)
   const navWrapperRef = useRef(null)
@@ -19,14 +53,11 @@ const Header = () => {
 
   useEffect(() => {
     if (menuClicked) {
-      // Disable scrolling
       document.body.style.overflow = 'hidden'
     } else {
-      // Re-enable scrolling
       document.body.style.overflow = 'auto'
     }
 
-    // Clean up on unmount or when menuClicked changes
     return () => {
       document.body.style.overflow = 'auto'
     }
@@ -41,7 +72,7 @@ const Header = () => {
       ease: 'Power2.easeOut',
     })
 
-    hamburgerTimeline.from(".nav__wrapper ul li", {
+    hamburgerTimeline.from(".nav__wrapper .mobile__menu__link", {
       opacity: 0,
       y: 100,
       ease: 'Power2.easeOut',
@@ -60,9 +91,14 @@ const Header = () => {
     return () => hamburgerTimeline.kill()
 
   }, [menuClicked])
+
   return (
     <>
-      <header className='desktop__header' ref={headerRef}>
+      <header
+        className={`desktop__header ${isHidden ? 'hidden' : ''}`}
+        ref={headerRef}
+      >
+        {/* Rest of the header JSX remains the same */}
         <div className="header__wrapper">
           <nav>
             <ul>
@@ -84,11 +120,11 @@ const Header = () => {
             <Image src='/images/logo.png' alt='growthios logo' sizes='100%' fill />
           </div>
           <div className="header__button">
-            <Button>Get Started</Button>
+            <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
           </div>
         </div>
       </header>
-      <header className="mobile__header">
+      <header className={`mobile__header ${isHidden ? 'hidden' : ''}`}>
         <div className={menuClicked ? "header__wrapper active" : "header__wrapper"}>
           <div className="header__logo__wrapper">
             <Image src='/images/logo.png' alt='growthios logo' sizes='100%' fill />
@@ -103,21 +139,21 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <Link className={router.pathname == '/' ? 'active' : ''} href="/">Home</Link>
+                <Link className={router.pathname == '/' ? 'active' : 'mobile__menu__link'} href="/">Home</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/about-us' ? 'active' : ''} href="/about-us">About us</Link>
+                <Link className={router.pathname == '/about-us' ? 'active' : 'mobile__menu__link'} href="/about-us">About us</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/case-studies' ? 'active' : ''} href="/case-studies">Case studies</Link>
+                <Link className={router.pathname == '/case-studies' ? 'active' : 'mobile__menu__link'} href="/case-studies">Case studies</Link>
               </li>
               <li>
-                <Link className={router.pathname == '/contact-us' ? 'active' : ''} href="/contact-us">Contact us</Link>
+                <Link className={router.pathname == '/contact-us' ? 'active' : 'mobile__menu__link'} href="/contact-us">Contact us</Link>
               </li>
             </ul>
           </nav>
           <div className="header__button">
-            <Button>Get Started</Button>
+            <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
           </div>
         </div>}
       </header>

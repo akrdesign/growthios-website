@@ -5,6 +5,7 @@ export { default as WorkflowLine } from '@/public/svg/workflow-line.svg'
 export { default as Star } from '@/public/svg/star.svg'
 export { default as Logo } from '@/public/svg/logo.svg'
 export { default as FounderLine } from '@/public/svg/founder-line.svg'
+export { default as DoubleQuotes } from '@/public/svg/double-quotes.svg'
 
 export { default as Facebook } from '@/public/svg/facebook.svg'
 export { default as Instagram } from '@/public/svg/instagram.svg'

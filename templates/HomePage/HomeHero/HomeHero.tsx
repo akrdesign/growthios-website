@@ -272,7 +272,7 @@ const HomeHero = () => {
           </div>
         </div>
         <div className="hero__bottom__wrapper">
-          <Button>Get Started</Button>
+          <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
         </div>
         <div className="hero__description__wrapper">
           <p>

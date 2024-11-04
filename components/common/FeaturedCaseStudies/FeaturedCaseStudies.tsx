@@ -81,7 +81,7 @@ const FeaturedCaseStudies = ({items}) => {
           <p className="description">Stay informed with our case studies.</p>
         </div>
         <div className="right__wrapper">
-          <Button>View All</Button>
+          <Button link='/case-studies'>View All</Button>
         </div>
       </div>
       <div className="featured__case__studies__bottom">

@@ -5,6 +5,10 @@
   width: 80%
   transform: translateX(-50%)
   z-index: z('header')
+  transition: opacity 0.3s ease
+
+  &.hidden
+    opacity: 0
 
   @media screen and (max-width: 48em)
     top: 6rem
@@ -63,6 +67,10 @@
   width: 80%
   transform: translateX(-50%)
   z-index: z('header')
+  transition: opacity 0.3s ease
+
+  &.hidden
+    opacity: 0
 
   @media screen and (min-width: 64.063em)
     display: none

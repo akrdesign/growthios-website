@@ -142,7 +142,7 @@ const WorkFlow = () => {
           long-term value. Let’s transform your business together!
         </p>
         <div className="workflow__button__wrapper">
-          <Button>Contact Us</Button>
+          <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
         </div>
       </div>
       <div className="workflow__right__wrapper">

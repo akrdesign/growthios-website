@@ -79,7 +79,7 @@ const AboutFounder = () => {
       </div>
       <div className="about__founder__content__wrapper">
         <h5 className="badge">Founder</h5>
-        <h1 className="heading">Dynanesh Ingle</h1>
+        <h1 className="heading">Dnyanesh Ingle</h1>
         <p className="description">
           Dnyanesh’s journey into the world of business began early—at just 17
           years old, he was already exploring social media marketing and content

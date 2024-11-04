@@ -348,7 +348,7 @@ const CASE_STUDIES = [
       clientOverview: {
         heading: "Client Overview",
         content: "Our client, an experienced real estate professional with over 4 years in the industry, hails from Bangalore - India's Silicon Valley. His portfolio primarily includes 2BHK to 5BHK apartments, villas, and other residential properties",
-        image: 'https://res.cloudinary.com/akrdesign/image/upload/v1730113608/growthios/navi-mumbai/client-image.webp'
+        image: 'https://res.cloudinary.com/akrdesign/image/upload/v1730695876/growthios/bangalore-market/client-image.webp'
       },
       clientChallenges: {
         heading: "Challenges Faced by Client",

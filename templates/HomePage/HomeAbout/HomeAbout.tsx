@@ -87,7 +87,7 @@ const HomeAbout = () => {
           Qualification for maximum results.
         </p>
         <div className="home__about__button__wrapper">
-          <Button>Contact Us</Button>
+          <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
         </div>
       </div>
     </section>

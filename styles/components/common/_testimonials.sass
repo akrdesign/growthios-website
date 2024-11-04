@@ -1,6 +1,91 @@
+// .testimonial__section
+//   width: 100%
+//   height: 60vh
+//   padding: 10rem 50rem
+//   display: flex
+//   align-content: center
+//   justify-content: center
+
+//   @media screen and (max-width: 48em)
+//     padding: 5rem 10rem
+//     height: 55vh
+
+//   @media screen and (max-width: 39.875em)
+//     height: 45vh
+
+//   @media screen and (max-width: 32.125em)
+//     height: 37vh
+
+//   @media screen and (max-width: 26.25em)
+//     height: 31vh
+
+//   @media screen and (min-width: 48.063em) and (max-width: 64em)
+//     padding: 5rem 10rem
+
+//   @media screen and (min-width: 64.063em) and (max-width: 90em)
+//     padding: 5rem 25rem
+//     height: 45vh
+
+//   .testimonial__card__container
+//     background-color: $mirage
+//     width: 100%
+//     height: 100%
+//     border-radius: 3.2rem
+//     padding: 5rem
+
+//     .testimonial__card__wrapper
+//       display: flex
+//       justify-content: space-between
+//       align-items: center
+//       flex-direction: column
+
+//       .rating__container
+//         display: flex
+//         gap: 0.5rem
+
+//         svg
+//           width: 3rem
+//           height: 3rem
+
+//       .testimonial__content
+//         padding: 1.5rem 0
+
+//         h3
+//           @extend %description-28
+//           text-align: center
+//           color: $white
+
+//       .testimonial__info__wrapper
+//         .client__info__wrapper
+//           display: flex
+//           align-items: center
+//           gap: 2rem
+
+//           .image__wrapper
+//             position: relative
+//             width: 6rem
+//             height: 6rem
+//             border-radius: 1.6rem
+//             overflow: hidden
+
+//             img
+//               width: 100%
+//               height: 100%
+//               object-fit: fill
+
+//           .client__info
+
+//             h1
+//               @extend %title-22
+//               color: $white
+
+//             p
+//               @extend %description-14
+//               color: $white
+
 .testimonial__section
   width: 100%
-  height: 60vh
+  // height: 60vh
   padding: 10rem 50rem
   display: flex
   align-content: center
@@ -8,23 +93,23 @@
 
   @media screen and (max-width: 48em)
     padding: 5rem 10rem
-    height: 55vh
+    // height: 55vh
 
-  @media screen and (max-width: 39.875em)
-    height: 45vh
+  // @media screen and (max-width: 39.875em)
+  //   height: 45vh
 
-  @media screen and (max-width: 32.125em)
-    height: 37vh
+  // @media screen and (max-width: 32.125em)
+  //   height: 37vh
 
-  @media screen and (max-width: 26.25em)
-    height: 31vh
+  // @media screen and (max-width: 26.25em)
+  //   height: 31vh
 
   @media screen and (min-width: 48.063em) and (max-width: 64em)
     padding: 5rem 10rem
 
   @media screen and (min-width: 64.063em) and (max-width: 90em)
     padding: 5rem 25rem
-    height: 45vh
+  //   height: 45vh
 
   .testimonial__card__container
     background-color: $mirage
@@ -34,51 +119,62 @@
     padding: 5rem
 
     .testimonial__card__wrapper
-      display: flex
-      justify-content: space-between
-      align-items: center
-      flex-direction: column
+      display: grid
+      grid-template-columns: 1fr 2fr
+      gap: 5rem
 
-      .rating__container
+      @media screen and (max-width: 48em)
+        grid-template-columns: 1fr
+
+      .testimonial__card__left__wrapper
+        height: 100%
         display: flex
-        gap: 0.5rem
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
-        svg
-          width: 3rem
-          height: 3rem
+        .testimonial__client__image
+          height: 15rem
+          width: 15rem
+          position: relative
+          border-radius: 100vw
+          overflow: hidden
 
-      .testimonial__content
-        padding: 1.5rem 0
+          img
+            object-fit: cover
 
-        h3
-          @extend %description-28
+        .testimonial__client__name
+          @extend %title-22
+          margin-top: 2rem
           text-align: center
-          color: $white
 
-      .testimonial__info__wrapper
-        .client__info__wrapper
+        .testimonial__client__position
+          @extend %description-16
+          margin-top: 0.5rem
+          text-align: center
+
+
+      .testimonial__card__right__wrapper
+        height: 100%
+
+
+        .testimonial__client__words
+          height: 100%
           display: flex
-          align-items: center
-          gap: 2rem
+          flex-direction: column
+          justify-content: center
+          p
+            @extend %description-16
 
-          .image__wrapper
-            position: relative
-            width: 6rem
-            height: 6rem
-            border-radius: 1.6rem
-            overflow: hidden
+        .bottom__svg__wrapper
+          display: grid
+          place-items: end
 
-            img
-              width: 100%
-              height: 100%
-              object-fit: fill
+        svg.top
+          width: 5rem
+          height: 5rem
+          transform: rotateZ(180deg)
 
-          .client__info
-
-            h1
-              @extend %title-22
-              color: $white
-
-            p
-              @extend %description-14
-              color: $white
+        svg.bottom
+          width: 5rem
+          height: 5rem
