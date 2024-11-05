@@ -1,23 +1,44 @@
 [
   {
+    "image": "/images/testimonial/mohit-mishra.webp",
+    "clientName": "Mr. Deepak Kumar",
+    "position": "Founder - Klog Realty Solutions",
+    "clientWord": "Growthios is very unique compared to other agencies in the market, they're a professional and very organized company . Because of them we have got more than 45% Quality leads in 5 Months",
+    "companyLogo": "/svg/companylogo/01.svg"
+  },
+  {
     "image": "/images/testimonial/anil-vishwakarma.webp",
     "clientName": "Anil Vishwakarma",
     "position": "Marketing Head - Naman Home makers",
-    "clientWord": "Before working with Cafen Media we had a terrible experience in performance marketing but once we were onboarded with them we got more than 463 leads in the last 3 months and 50 Site visits 2 Sales worth 92,771$ out of it, they're very expert in real estate lead generation",
+    "clientWord": "Before working with Growthios we had a terrible experience in performance marketing but once we were onboarded with them we got more than 463 leads in the last 3 months and 50 Site visits 2 Sales worth 92,771$ out of it, they're very expert in real estate lead generation",
     "companyLogo": "/svg/companylogo/01.svg"
   },
   {
     "image": "/images/testimonial/raed-abubaker.webp",
     "clientName": "Mr. Ra’ed Abubaker",
     "position": "CIO PSI Real Estate",
-    "clientWord": "Cafen Media helps us to generate 47 qualified leads for our luxury property in Dubai, 15 Sitevisits and 3 Closures worth 40,00,000 Dirhams (1,08,905 $) I highly recommend Cafen Media to all real estate companies for their marketing needs.",
+    "clientWord": "Growthios helps us to generate 47 qualified leads for our luxury property in Dubai, 15 Sitevisits and 3 Closures worth 40,00,000 Dirhams (1,08,905 $) I highly recommend Growthios to all real estate companies for their marketing needs.",
+    "companyLogo": "/svg/companylogo/01.svg"
+  },
+  {
+    "image": "/images/testimonial/mohit-mishra.webp",
+    "clientName": "Mr. Mohit Mishra",
+    "position": "Founder - La Pincode Properties",
+    "clientWord": "Because of Growthios we were able to get more than 20+ Bookings in 8 Months, there expertise in strategy creation and it's execution is just top notch",
     "companyLogo": "/svg/companylogo/01.svg"
   },
   {
     "image": "/images/testimonial/akshay-naik.webp",
     "clientName": "Mr. Akshay Naik",
     "position": "Channel Partner",
-    "clientWord": "Cafen Media helped us with 73 leads out of which 43 were quality leads and we were able to get 20 Site visits and 3 Closures worth 4,81,930 $ in one month. I highly recommend these guys to real estate industry for their marketing and lead generation requirements",
+    "clientWord": "Growthios helped us with 73 leads out of which 43 were quality leads and we were able to get 20 Site visits and 3 Closures worth 4,81,930 $ in one month. I highly recommend these guys to real estate industry for their marketing and lead generation requirements",
+    "companyLogo": "/svg/companylogo/01.svg"
+  },
+  {
+    "image": "/images/testimonial/vishal-sonis.webp",
+    "clientName": "Mr. Vishal Sonis",
+    "position": "Founder - Fortune Properties",
+    "clientWord": "Growthios helped us get 169 leads out of which 96 were qualified and 15 Site visits and 1 sale worth 53 Lakhs (63,655 $) was done in 30 days. They are very creative, result oriented in their approach. we are really happy with them.",
     "companyLogo": "/svg/companylogo/01.svg"
   }
 ]
