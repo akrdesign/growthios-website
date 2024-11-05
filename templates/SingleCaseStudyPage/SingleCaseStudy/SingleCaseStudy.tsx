@@ -17,6 +17,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
   const campaignHighlightSection = useRef(null)
   const adsPresentationSection = useRef(null)
   const achievementSection = useRef(null)
+  const facebookAdsSection = useRef(null)
 
   useGSAP(() => {
     const mainSectionHeading = new SplitType('.single__case__study__main__section .heading', { types: 'words' })
@@ -29,6 +30,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
     const campaignHighlightSectionHeading = new SplitType('.case__study__campaignHighlights__content__wrapper .heading', { types: 'words' })
     const adsPresentationSectionHeading = new SplitType('.case__study__adsPresentation__section .heading', { types: 'words' })
     const achievementSectionHeading = new SplitType('.case__study__achievements__section .heading', { types: 'words' })
+    const facebookAdsSectionHeading = new SplitType('.case__study__facebookAds__section .heading', { types: 'words' })
 
     const mainSectionTl = gsap.timeline({
       scrollTrigger: {
@@ -303,7 +305,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
       stagger: 0.1,
     })
 
-    adsPresentationTl.from(".case__study__adsPresentation__section .custom__video", {
+    adsPresentationTl.from(".case__study__facebookAds__section .custom__video", {
       opacity: 0,
       y: 100,
       ease: 'Power2.easeOut',
@@ -315,6 +317,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
       y: 100,
       ease: 'Power2.easeOut',
       duration: 1,
+      stagger: {amount: 0.5}
     })
 
     // -----------------------------------------------
@@ -341,6 +344,33 @@ const SingleCaseStudy = ({ caseStudy }) => {
       y: 100,
       ease: 'Power2.easeOut',
       duration: 1,
+    })
+
+    // -----------------------------------------------
+
+    const facebookAdsTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: facebookAdsSection.current,
+        start: 'top 60%',
+        end: 'top top',
+        // toggleActions: 'play none restart none',
+      },
+    })
+
+    facebookAdsTl.from(facebookAdsSectionHeading.words, {
+      opacity: 0,
+      y: 100,
+      ease: 'Power2.easeOut',
+      duration: 1,
+      stagger: 0.1,
+    })
+
+    facebookAdsTl.from(".case__study__facebookAds__section img", {
+      opacity: 0,
+      y: 100,
+      ease: 'Power2.easeOut',
+      duration: 1,
+      stagger: {amount: 0.5}
     })
 
   }, [])
@@ -491,7 +521,7 @@ const SingleCaseStudy = ({ caseStudy }) => {
         <section className="case__study__adsPresentation__section" ref={adsPresentationSection}>
           <h1 className="heading">{caseStudy?.content?.adsPresentation?.heading}</h1>
           {caseStudy?.content?.adsPresentation?.video && <Video src={caseStudy?.content?.adsPresentation?.video} />}
-          {caseStudy?.content?.adsPresentation?.images && <ImageModal images={caseStudy?.content?.adsPresentation?.images} />}
+          {caseStudy?.content?.adsPresentation?.images && <ImageModal images={caseStudy?.content?.adsPresentation?.images} sectionId="adsPresentation" />}
         </section>
       )}
 
@@ -507,7 +537,12 @@ const SingleCaseStudy = ({ caseStudy }) => {
         </section>
       )}
 
-
+      {caseStudy?.content?.facebookAds && (
+        <section className="case__study__facebookAds__section" ref={facebookAdsSection}>
+          <h1 className="heading">{caseStudy?.content?.facebookAds?.heading}</h1>
+          {caseStudy?.content?.facebookAds?.images && <ImageModal images={caseStudy?.content?.facebookAds?.images} sectionId="facebookAds" />}
+        </section>
+      )}
     </>
   )
 }
