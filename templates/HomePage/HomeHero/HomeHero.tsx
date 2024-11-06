@@ -13,7 +13,7 @@ const HomeHero = () => {
       types: 'words',
     })
 
-    const tl = gsap.timeline({});
+    const tl = gsap.timeline({})
 
     tl.from(heading.words, {
       opacity: 0,
@@ -23,41 +23,61 @@ const HomeHero = () => {
       stagger: 0.1,
     })
 
-    tl.to('.hero__main__heading h1.second-child', {
-      y: 0,
-      opacity: 1,
-      duration: 1.5,
-      ease: 'Power2.easeOut',
-    }, 0.8)
+    tl.to(
+      '.hero__main__heading h1.second-child',
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'Power2.easeOut',
+      },
+      0.8
+    )
 
-    tl.to('.hero__svg__wrapper svg path', {
-      opacity: 1,
-      duration: 1.5,
-      stagger: { amount: 2 },
-    }, 0.5)
+    tl.to(
+      '.hero__svg__wrapper svg path',
+      {
+        opacity: 1,
+        duration: 1.5,
+        stagger: { amount: 2 },
+      },
+      0.5
+    )
 
-    tl.from('.hero__bottom__wrapper', {
-      opacity: 0,
-      y: 100,
-      ease: 'Power2.easeOut',
-      duration: 1,
-    }, 0.5)
+    tl.from(
+      '.hero__bottom__wrapper',
+      {
+        opacity: 0,
+        y: 100,
+        ease: 'Power2.easeOut',
+        duration: 1,
+      },
+      0.5
+    )
 
-    tl.from(".hero__description__wrapper p", {
-      opacity: 0,
-      y: 100,
-      ease: 'Power2.easeOut',
-      duration: 1,
-      stagger: 0.1,
-    }, 0.8)
+    tl.from(
+      '.hero__description__wrapper p',
+      {
+        opacity: 0,
+        y: 100,
+        ease: 'Power2.easeOut',
+        duration: 1,
+        stagger: 0.1,
+      },
+      0.8
+    )
 
-    tl.from(".companies__logo__container", {
-      opacity: 0,
-      y: 100,
-      ease: 'Power2.easeOut',
-      duration: 1,
-      stagger: 0.1,
-    }, 0.8)
+    tl.from(
+      '.companies__logo__container',
+      {
+        opacity: 0,
+        y: 100,
+        ease: 'Power2.easeOut',
+        duration: 1,
+        stagger: 0.1,
+      },
+      0.8
+    )
   }, [])
 
   return (
@@ -65,7 +85,7 @@ const HomeHero = () => {
       <section className="home__hero_section">
         <div className="hero__heading__container">
           <div className="hero__main__heading">
-            <h1 className="first-child">Fueling you</h1>
+            <h1 className="first-child">Fueling Your</h1>
             <h1 className="second-child">Real Estate Growth</h1>
           </div>
           <div className="hero__svg__wrapper">
@@ -272,7 +292,9 @@ const HomeHero = () => {
           </div>
         </div>
         <div className="hero__bottom__wrapper">
-          <Button link='https://calendly.com/dnyaneshingle/real-estate-discovery-call'>Get Started</Button>
+          <Button link="https://calendly.com/dnyaneshingle/real-estate-discovery-call">
+            Get Started
+          </Button>
         </div>
         <div className="hero__description__wrapper">
           <p>
