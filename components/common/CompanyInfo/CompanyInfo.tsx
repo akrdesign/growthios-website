@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 3,
-    heading: 'Email',
+    heading: 'Address',
     info: '98, Laxmi Niwas, Gajanan nagar Lane 7 , Dabki Road, Sopinath maharaj temple, Gajanan Nagar, Akola, Akola, Maharashtra, 444002',
   },
 ]
